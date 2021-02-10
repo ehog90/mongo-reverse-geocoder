@@ -1,0 +1,6 @@
+/.idea/
+/.tscache/
+/.vscode/
+/dist/
+/.vs/
+/node_modules/

@@ -1,0 +1,5 @@
+db:
+  host: 192.168.1.22
+  db: blitzinfo
+geocoding:
+  distanceThreshold: 15000
