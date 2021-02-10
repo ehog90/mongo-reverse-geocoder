@@ -5,7 +5,7 @@ import * as express from 'express';
 import * as mongoose from 'mongoose';
 import { mongoLink } from './config';
 
-mongoose.connect(mongoLink, (error) => {
+mongoose.connect(mongoLink, { poolSize: 3 }, (error) => {
   if (error) {
     console.error(`Failed to connect to the database ${mongoLink}: ${error}`);
     process.exit(1);
