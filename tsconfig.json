@@ -1,6 +1,6 @@
 {
   "exclude": [
-    "testing",
+    "test",
     "node_modules",
     "other"
   ],
