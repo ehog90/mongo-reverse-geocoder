@@ -41,3 +41,12 @@ app
 
 const server = http.createServer(app);
 server.listen(8889);
+
+process.on('unhandledRejection', function (reason, p) {
+  console.log(
+    'Possibly Unhandled Rejection at: Promise ',
+    p,
+    ' reason: ',
+    reason,
+  );
+});
