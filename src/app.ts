@@ -5,7 +5,7 @@ import * as express from 'express';
 import * as mongoose from 'mongoose';
 import { mongoLink } from './config';
 
-mongoose.connect(mongoLink, { poolSize: 3 }, (error) => {
+mongoose.connect(mongoLink, (error) => {
   if (error) {
     console.error(`Failed to connect to the database ${mongoLink}: ${error}`);
     process.exit(1);
@@ -41,12 +41,3 @@ app
 
 const server = http.createServer(app);
 server.listen(8889);
-
-process.on('unhandledRejection', function (reason, p) {
-  console.log(
-    'Possibly Unhandled Rejection at: Promise ',
-    p,
-    ' reason: ',
-    reason,
-  );
-});
