@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+  mongo-revgeo:
+    build: .
+    ports:
+      - 8889:8889
+    restart: unless-stopped
+    networks:
+      - docker-local
+networks:
+  docker-local:
